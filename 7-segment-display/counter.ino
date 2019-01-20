@@ -20,119 +20,54 @@ void loop()
     setDigit(i);
     delay(1000);
   }
-
 }
 
 void setDigit(int digit)
 {
-  int segs[7];
+  uint8_t segs;
+
   switch(digit){
     case 0:
-      segs[0] = 2;
-      segs[1] = 3;
-      segs[2] = 4;
-      segs[3] = 5;
-      segs[4] = 6;
-      segs[5] = 7;
-      segs[6] = 0;
+      segs = 0x3F;
       break;
     case 1:
-      segs[0] = 3;
-      segs[1] = 4;
-      segs[2] = 0;
-      segs[3] = 0;
-      segs[4] = 0;
-      segs[5] = 0;
-      segs[6] = 0;
+      segs = 0x06;
       break;
     case 2:
-      segs[0] = 2;
-      segs[1] = 3;
-      segs[2] = 5;
-      segs[3] = 7;
-      segs[4] = 8;
-      segs[5] = 0;
-      segs[6] = 0;
+      segs = 0x6B;
       break;
     case 3:
-      segs[0] = 2;
-      segs[1] = 3;
-      segs[2] = 4;
-      segs[3] = 5;
-      segs[4] = 8;
-      segs[5] = 0;
-      segs[6] = 0;
+      segs = 0x4F;
       break;
     case 4: 
-      segs[0] = 3;
-      segs[1] = 4;
-      segs[2] = 8;
-      segs[3] = 6;
-      segs[4] = 0;
-      segs[5] = 0;
-      segs[6] = 0;
+      segs = 0x56;
       break;
     case 5:
-      segs[0] = 2;
-      segs[1] = 4;
-      segs[2] = 5;
-      segs[3] = 6;
-      segs[4] = 8;
-      segs[5] = 0;
-      segs[6] = 0;
+      segs = 0x5D;
       break;
     case 6:
-      segs[0] = 2;
-      segs[1] = 4;
-      segs[2] = 5;
-      segs[3] = 6;
-      segs[4] = 7;
-      segs[5] = 8;
-      segs[6] = 0;
+      segs = 0x7D;
       break;
     case 7:
-      segs[0] = 2;
-      segs[1] = 3;
-      segs[2] = 4;
-      segs[3] = 0;
-      segs[4] = 0;
-      segs[5] = 0;
-      segs[6] = 0;
+      segs = 0x07;
       break;
     case 8:
-      segs[0] = 2;
-      segs[1] = 3;
-      segs[2] = 4;
-      segs[3] = 5;
-      segs[4] = 6;
-      segs[5] = 7;
-      segs[6] = 8;
+      segs = 0x7F;
       break;
     case 9:
-      segs[0] = 2;
-      segs[1] = 3;
-      segs[2] = 4;
-      segs[3] = 5;
-      segs[4] = 6;
-      segs[5] = 8;
-      segs[6] = 0;
+      segs = 0x5F;
       break;
     default:
-      segs[0] = 0;
-      segs[1] = 0;
-      segs[2] = 0;
-      segs[3] = 0;
-      segs[4] = 0;
-      segs[5] = 0;
-      segs[6] = 0;
+      segs = 0x00;
       break;
   }
   
   clear();
   
   for(int i = 0; i < 7; i++){
-    if(segs[i] == 0) { continue; }
-    else { digitalWrite(segs[i], HIGH); }
+    if((segs >> i) & 0x01) { 
+      digitalWrite(i+2, HIGH); 
+      }
   }
 }
 
