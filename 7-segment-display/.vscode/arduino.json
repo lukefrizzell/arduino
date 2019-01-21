@@ -1,5 +1,0 @@
-{
-    "board": "arduino:avr:uno",
-    "sketch": "counter.ino",
-    "port": "/dev/ttyUSB0"
-}
