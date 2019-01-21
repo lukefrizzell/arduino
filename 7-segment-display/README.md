@@ -11,8 +11,6 @@
 | 220 OHM Resistors  | 7        |
 | Breadboard         | 1        |
 
-![All about circuits diagram](https://www.allaboutcircuits.com/uploads/articles/seven-segment-arduino_ver2.jpg?v=1477537057504)
-
 ---------------------------------------------------------------------------------------------------------------------------
 
 ## Projects:
