@@ -11,6 +11,8 @@
 | 220 OHM Resistors  | 7        |
 | Breadboard         | 1        |
 
+![Circuit Diagram](https://github.com/lukefrizzell/arduino/blob/master/7-segment-display/circuit.png)
+
 ---------------------------------------------------------------------------------------------------------------------------
 
 ## Projects:
