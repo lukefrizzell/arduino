@@ -3,7 +3,7 @@
 ![7-segment display arduino](https://github.com/lukefrizzell/arduino/blob/master/7-segment-display/7-segment-arduino.jpg)
 
 | Parts Needed       | Quantity |
-| ------------------ | -------- |
+| ------------------ | :------: |
 | Arduino Uno        | 1        |
 | USB B Cable        | 1        |
 | 7-segment Display  | 1        |
