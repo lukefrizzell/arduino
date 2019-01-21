@@ -42,7 +42,7 @@ void setDigit(int digit)
 }
 
 void clear(){
-  for(int i = 0; i < 9; i++){
+  for(int i = 2; i < 9; i++){
     digitalWrite(i, LOW);
   }
 }
