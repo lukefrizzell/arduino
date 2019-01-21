@@ -4,4 +4,4 @@ Here I will upload the code, images and information about arduino projects that 
 
 -----------------------------------------------------------------------------------------------------------------------
 
-1. 7-Segment Display
+1. [7-Segment Display](https://github.com/lukefrizzell/arduino/tree/master/7-segment-display)
