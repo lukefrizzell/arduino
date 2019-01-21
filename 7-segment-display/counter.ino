@@ -15,7 +15,7 @@ void loop()
 {
   // loop to turn leds od seven seg ON
   
-  for(int i=0;i<10;i++)
+  for(int i=0;i<16;i++)
   {
     setDigit(i);
     delay(1000);
@@ -57,6 +57,24 @@ void setDigit(int digit)
     case 9:
       segs = 0x5F;
       break;
+    case 10:
+      segs = 0x77;
+      break;
+    case 11:
+      segs = 0x7C;
+      break;
+    case 12:
+      segs = 0x39;
+      break;
+    case 13:
+      segs = 0x6E;
+      break;
+    case 14:
+      segs = 0x79;
+      break;
+    case 15:
+      segs = 0x71;
+      break;
     default:
       segs = 0x00;
       break;
@@ -67,7 +85,7 @@ void setDigit(int digit)
   for(int i = 0; i < 7; i++){
     if((segs >> i) & 0x01) { 
       digitalWrite(i+2, HIGH); 
-      }
+    }
   }
 }
 
