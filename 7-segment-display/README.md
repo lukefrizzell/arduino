@@ -11,7 +11,11 @@
 | 220 OHM Resistors  | 7        |
 | Breadboard         | 1        |
 
+---------------------------------------------------------------------------------------------------------------------------
+
 ## Projects:
 counter.ino - Counts from 0 to 9 with a 1 second delay. (Then resets to 0 and loops)
+
+---------------------------------------------------------------------------------------------------------------------------
 
 Inspired by [All about circuits](https://www.allaboutcircuits.com/projects/interface-a-seven-segment-display-to-an-arduino/)
